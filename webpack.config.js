@@ -43,6 +43,10 @@ module.exports = {
         allChunks: true
     })
     ] : [
+    HTMLWebpackPluginConfig,
+    new ExtractTextPlugin('[contenthash].main.css', {
+        allChunks: true
+    }),
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: false }),
